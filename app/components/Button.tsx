@@ -11,7 +11,7 @@ interface ButtonProps {
   outline?: boolean;
   small?: boolean;
   icon?: IconType;
-  deleteButton: boolean;
+  deleteButton?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({

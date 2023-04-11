@@ -64,7 +64,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       <div className="flex flex-row items-center gap-3">
         <div className="flex flex-col items-end gap-1">
           {currentUser && (
-            <div className="select-none text-center">
+            <div className="hidden select-none text-center lg:block">
               Welcome,{" "}
               <span className="font-bold text-primary">{currentUser.name}</span>
             </div>

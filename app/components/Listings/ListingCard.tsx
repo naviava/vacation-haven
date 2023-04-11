@@ -72,7 +72,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
       onClick={() => router.push(`/listings/${listing.id}`)}
       className="group col-span-1 cursor-pointer"
     >
-      <div className="flex w-full flex-col gap-2 rounded-lg transition duration-300 group-hover:scale-110">
+      <div className="flex w-full flex-col gap-2 rounded-lg transition duration-300 lg:group-hover:scale-110">
         <div className="relative aspect-square w-full overflow-hidden rounded-xl">
           <Image
             fill

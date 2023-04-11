@@ -1,14 +1,15 @@
 import "./globals.css";
 import { Nunito } from "next/font/google";
 
-import getCurrentUser from "./actions/getCurrentUser";
-
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 import ToasterProvider from "./providers/ToasterProvider";
 import RentModal from "./components/modals/RentModal";
 import LoginModal from "./components/modals/LoginModal";
 import RegisterModal from "./components/modals/RegisterModal";
+import SearchModal from "./components/modals/SearchModal";
+
+import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Vacation Haven",
@@ -31,6 +32,7 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
+          <SearchModal />
           <RentModal />
           <LoginModal />
           <RegisterModal />

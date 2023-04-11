@@ -294,6 +294,7 @@ const RentModal = () => {
       secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
       body={bodyContent}
+      disabled={isLoading}
     />
   );
 };

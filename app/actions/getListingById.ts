@@ -20,6 +20,6 @@ export default async function getListingById(listingId: string) {
       },
     };
   } catch (err: any) {
-    return null;
+    throw new Error(err);
   }
 }

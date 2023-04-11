@@ -64,14 +64,16 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       <div className="flex flex-row items-center gap-3">
         <div className="flex flex-col items-end gap-1">
           {currentUser && (
-            <div className="hidden select-none text-center lg:block">
-              Welcome,{" "}
-              <span className="font-bold text-primary">{currentUser.name}</span>
+            <div className="hidden select-none text-right lg:block">
+              <span className="text-sm">Welcome, </span>
+              <span className="text-lg font-bold text-primary">
+                {currentUser.name}
+              </span>
             </div>
           )}
           <div
             onClick={onRent}
-            className="hidden w-fit cursor-pointer rounded-full bg-neutral-100 px-3 py-1 text-center text-sm font-semibold transition duration-300 hover:scale-110 hover:bg-primary/30 md:block"
+            className="hidden w-20 cursor-pointer whitespace-nowrap rounded-full bg-neutral-100 px-3 py-2 text-center text-xs font-bold transition duration-300 hover:scale-110 hover:bg-primary/30 md:block lg:py-1"
           >
             My haven
           </div>
@@ -99,7 +101,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   onClick={() => router.push("/trips")}
                   label="My trips"
                 />
-                <MenuItem onClick={() => {}} label="Favorites" />
+                <MenuItem
+                  onClick={() => router.push("/favorites")}
+                  label="Favorites"
+                />
                 <MenuItem onClick={() => {}} label="My properties" />
                 <MenuItem onClick={onRent} label="My Haven" />
                 <hr />

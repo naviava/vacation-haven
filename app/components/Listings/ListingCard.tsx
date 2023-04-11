@@ -27,6 +27,7 @@ interface ListingCardProps {
   disabled?: boolean;
   actionLabel?: string;
   actionId?: string;
+  deleteButton?: boolean;
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({
@@ -37,6 +38,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
   disabled,
   actionLabel,
   actionId = "",
+  deleteButton = false,
 }) => {
   const router = useRouter();
   const { getByValue } = useCountries();
@@ -102,6 +104,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
               small
               label={actionLabel}
               onClick={handleCancel}
+              deleteButton={deleteButton}
             />
           </div>
         )}

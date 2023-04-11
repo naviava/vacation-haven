@@ -11,6 +11,7 @@ interface ButtonProps {
   outline?: boolean;
   small?: boolean;
   icon?: IconType;
+  deleteButton: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   outline,
   small,
   icon: Icon,
+  deleteButton,
 }) => {
   const spinner = (
     <div
@@ -37,6 +39,8 @@ const Button: React.FC<ButtonProps> = ({
       ${
         outline
           ? "border-black bg-white text-black hover:bg-gray-100"
+          : deleteButton
+          ? "border-red-600 bg-white hover:bg-red-50"
           : "border-primary bg-primary text-white"
       }
       ${

@@ -1,3 +1,5 @@
+"use client";
+
 // Types.
 import { SafeListing, SafeUser } from "../types";
 

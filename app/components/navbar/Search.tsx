@@ -41,11 +41,15 @@ const Search = () => {
 
       return `${searchDuration} day${searchDuration > 1 ? "s" : ""}`;
     }
+
+    return "Any week";
   }, [startDate, endDate]);
 
   const guestLabel = useMemo(() => {
     if (guestCount)
       return `${guestCount} guest${parseInt(guestCount) > 1 ? "s" : ""}`;
+
+    return "Add guests";
   }, [guestCount]);
 
   return (

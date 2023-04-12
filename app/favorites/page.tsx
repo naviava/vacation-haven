@@ -9,6 +9,14 @@ import getFavorites from "../actions/getFavorites";
 
 const FavoritesPage = async () => {
   const currentUser = await getCurrentUser();
+
+  if (!currentUser)
+    return (
+      <ClientOnly>
+        <EmptyState title="Unauthorized" subtitle="Please login." />
+      </ClientOnly>
+    );
+
   const userFavorites = await getFavorites();
 
   if (userFavorites.length === 0) {
